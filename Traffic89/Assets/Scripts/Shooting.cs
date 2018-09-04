@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour {
-
+    public GameObject bullet;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,9 +18,17 @@ public class Shooting : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col2)
     {
-        Debug.Log("Collision");
+        if (col2.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Collision");
             Destroy(col2.gameObject);
-            Destroy(gameObject);
+            
+        }
+        else
+        {
+            Destroy(bullet);
+        }
+
        
     }
 }
