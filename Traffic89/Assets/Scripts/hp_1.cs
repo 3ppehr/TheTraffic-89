@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hp : MonoBehaviour {
+public class hp_1 : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     public Controlling playerscript;
     [SerializeField]
     Sprite FullHP;
     [SerializeField]
     Sprite LowHP;
+
     // Use this for initialization
     void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -23,7 +24,7 @@ public class hp : MonoBehaviour {
     void ManageHeart()
     {
         int tmp = playerscript.Health;
-        if (tmp == -1)
+        if (tmp == 3)
         {
             spriteRenderer.sprite = LowHP;
         }

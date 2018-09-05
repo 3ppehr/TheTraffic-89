@@ -8,6 +8,8 @@ TagManager:
   - fire1
   - Enemy
   - player
+  - Undefined
+  - Bullet
   layers:
   - Default
   - TransparentFX
