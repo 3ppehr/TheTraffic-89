@@ -24,7 +24,7 @@ public class hp_1 : MonoBehaviour {
     void ManageHeart()
     {
         int tmp = playerscript.Health;
-        if (tmp == 3)
+        if (tmp == -1)
         {
             spriteRenderer.sprite = LowHP;
         }

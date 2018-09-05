@@ -29,23 +29,6 @@ public class Shooting : MonoBehaviour {
             Destroy(bullet);
         }
 
-        if (col2.gameObject.name.Equals("Bullet"))
-        {
-
-            Destroy(col2.gameObject);
-        }
-
-
-
-    }
-
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag==("Bullet"))
-        {
-
-            Destroy(col.gameObject);
-        }
+       
     }
 }

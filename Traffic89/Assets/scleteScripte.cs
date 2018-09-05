@@ -24,24 +24,10 @@ public class scleteScripte : MonoBehaviour {
             playerscript.Damagetoplayer();
             Destroy(gameObject);
         }
-
-        if (col.gameObject.tag == ("Bullet"))
-        {
-
-            Destroy(col.gameObject);
-        }
-
-
-    }
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        
     }
 
 
-
-
-
+    
     //public void Damagetoplayer()
     //{
     //    //bool tmp = EnemyInRange();
