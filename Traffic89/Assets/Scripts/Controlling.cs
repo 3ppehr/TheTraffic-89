@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Controlling : MonoBehaviour
 {
+    public GameObject gameover;
     public int Health = 4;
     bool Heart1;
     bool Heart2;
@@ -25,8 +27,12 @@ public class Controlling : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (Health < -2)
+        if (Health <= 0)
+        {
             Hpover();
+
+        }
+            
         //Store the current horizontal input in the float moveHorizontal.
         float moveHorizontal = Input.GetAxis("Horizontal");
 
@@ -53,8 +59,10 @@ public class Controlling : MonoBehaviour
 
     void Hpover()
     {
+        gameover.SetActive (true);
 
-        //SceneManager.LoadScene("GameOver");
+
+           //SceneManager.LoadScene("GameOver");
 
     }
 }
