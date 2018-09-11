@@ -14,12 +14,15 @@ public class ScoringSystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        myTimer = Time.deltaTime + myTimer;
-        if(myTimer>=1)
+        if (Manager0.gamehasended == false)
         {
-            myTimer = 0;
-            myScore += 10;
-            Score.text = myScore.ToString();
+            myTimer = Time.deltaTime + myTimer;
+            if (myTimer >= 1)
+            {
+                myTimer = 0;
+                myScore += 10;
+                Score.text = myScore.ToString();
+            }
         }
 
 	}

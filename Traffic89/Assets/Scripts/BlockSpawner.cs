@@ -19,16 +19,19 @@ public class BlockSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Time.time > nextspawn)
+        if (Manager0.gamehasended == false)
         {
 
-            nextspawn = Time.time + spawnRate;
-            roundX = Random.Range(-2, 2);
-            whereTospawn = new Vector2(roundX, transform.position.y);
-            Instantiate(enemy, whereTospawn, Quaternion.identity);
-            //
+            if (Time.time > nextspawn)
+            {
 
+                nextspawn = Time.time + spawnRate;
+                roundX = Random.Range(-2, 2);
+                whereTospawn = new Vector2(roundX, transform.position.y);
+                Instantiate(enemy, whereTospawn, Quaternion.identity);
+                //
+
+            }
         }
 
 

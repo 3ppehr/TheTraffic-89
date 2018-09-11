@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Controlling : MonoBehaviour
 {
+    public Manager0 Manager;
     public GameObject gameover;
     public int Health = 4;
     bool Heart1;
@@ -26,24 +28,27 @@ public class Controlling : MonoBehaviour
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
+        
 
         if (Health <= 0)
         {
-            Hpover();
-
+            //gameover.SetActive(true);
+            Manager.EndGame();
         }
-            
-        //Store the current horizontal input in the float moveHorizontal.
-        float moveHorizontal = Input.GetAxis("Horizontal");
+        if (Manager0.gamehasended == false)
+        {
+            //Store the current horizontal input in the float moveHorizontal.
+            float moveHorizontal = Input.GetAxis("Horizontal");
 
-        //Store the current vertical input in the float moveVertical.
-        float moveVertical = Input.GetAxis("Vertical");
+            //Store the current vertical input in the float moveVertical.
+            float moveVertical = Input.GetAxis("Vertical");
 
-        //Use the two store floats to create a new Vector2 variable movement.
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+            //Use the two store floats to create a new Vector2 variable movement.
+            Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
-        //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-        rb2d.AddForce(movement * speed);
+            //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
+            rb2d.AddForce(movement * speed);
+        }
     }
 
 
@@ -57,12 +62,11 @@ public class Controlling : MonoBehaviour
     }
 
 
-    void Hpover()
-    {
-        gameover.SetActive (true);
+    //void Hpover()
+    //{
+    //    Manager0.gamehasended = true;
+    //    gameover.SetActive (true);
+          
 
-
-           //SceneManager.LoadScene("GameOver");
-
-    }
+    //}
 }
