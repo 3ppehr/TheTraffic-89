@@ -14,11 +14,13 @@ public class ScoringSystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         if (Manager0.gamehasended == false)
         {
             myTimer = Time.deltaTime + myTimer;
             if (myTimer >= 1)
             {
+
                 myTimer = 0;
                 myScore += 10;
                 Score.text = myScore.ToString();
@@ -26,4 +28,14 @@ public class ScoringSystem : MonoBehaviour {
         }
 
 	}
+
+
+
+    public void _score()
+
+
+    {
+        myScore += 100;
+
+    }
 }

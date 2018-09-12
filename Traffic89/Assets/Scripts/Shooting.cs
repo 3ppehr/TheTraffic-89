@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour {
+    public ScoringSystem Scoring;
     public GameObject bullet;
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class Shooting : MonoBehaviour {
     {
         if (col2.gameObject.tag == "Enemy")
         {
+            Scoring._score();
             Debug.Log("Collision");
             Destroy(col2.gameObject);
             

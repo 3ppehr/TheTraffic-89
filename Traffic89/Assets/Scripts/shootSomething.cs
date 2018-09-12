@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class shootSomething : MonoBehaviour
 {
-
+    public ScoringSystem Scoring;
     public GameObject projectile;
     public Vector2 velocity;
     bool canShoot = true;
@@ -42,6 +42,7 @@ public class shootSomething : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
+            Scoring._score();
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
