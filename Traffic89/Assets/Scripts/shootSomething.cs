@@ -42,6 +42,7 @@ public class shootSomething : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
+            Debug.Log("Collision00000000000000");
             Scoring._score();
             Destroy(col.gameObject);
             Destroy(gameObject);

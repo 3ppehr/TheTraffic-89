@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour {
-    public ScoringSystem Scoring;
+  //  public ScoringSystem Scoring;
     public GameObject bullet;
 	// Use this for initialization
 	void Start () {
-		
+        
 	}
 	
 	// Update is called once per frame
@@ -17,20 +17,24 @@ public class Shooting : MonoBehaviour {
 
 
 
-    void OnCollisionEnter2D(Collision2D col2)
-    {
-        if (col2.gameObject.tag == "Enemy")
-        {
-            Scoring._score();
-            Debug.Log("Collision");
-            Destroy(col2.gameObject);
+    //void OnCollisionEnter2D(Collision2D col2)
+    //{
+    //    if (col2.gameObject.tag == "Enemy")
+    //    {
+    //        Debug.Log("first step");
+    //        float tmpscore= GetComponent<ScoringSystem>().myScore;
+    //        Debug.Log("step 2");
+    //        GetComponent<ScoringSystem>().myScore = tmpscore + 100;
+    //        Debug.Log("step 3");
+
+    //        Destroy(col2.gameObject);
             
-        }
-        else
-        {
-            Destroy(bullet);
-        }
+    //    }
+    //    else
+    //    {
+    //        Destroy(bullet);
+    //    }
 
        
-    }
+    
 }

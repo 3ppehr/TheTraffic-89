@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ScoringSystem : MonoBehaviour {
     public float myTimer;
+   // public ScoringSystem Scoring;
+
     public Text Score;
     public float myScore=0;
 	// Use this for initialization
@@ -22,7 +24,7 @@ public class ScoringSystem : MonoBehaviour {
             {
 
                 myTimer = 0;
-                myScore += 10;
+               // myScore += 0;
                 Score.text = myScore.ToString();
             }
         }
