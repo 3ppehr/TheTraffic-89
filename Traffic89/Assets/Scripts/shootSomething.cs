@@ -22,7 +22,7 @@ public class shootSomething : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.T) && canShoot)
+        if (Input.GetKeyDown(KeyCode.E) && canShoot)
         {
 
             GameObject go = (GameObject)Instantiate(projectile, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);

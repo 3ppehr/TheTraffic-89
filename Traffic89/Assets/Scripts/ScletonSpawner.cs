@@ -22,7 +22,7 @@ public class ScletonSpawner : MonoBehaviour {
 
                 nextspawn = Time.time + spawnRate;
                 roundX = Random.Range(-2, 2);
-                whereTospawn = new Vector2(roundX, transform.position.y);
+                whereTospawn = new Vector2(roundX, transform.position. y);
                 Instantiate(enemy, whereTospawn, Quaternion.identity);
                 //
 

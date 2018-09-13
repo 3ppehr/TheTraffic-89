@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class ScoringSystem : MonoBehaviour {
     public float myTimer;
-   // public ScoringSystem Scoring;
+    public GameObject jigar;
+    // public ScoringSystem Scoring;
 
     public Text Score;
     public float myScore=0;
@@ -24,8 +25,15 @@ public class ScoringSystem : MonoBehaviour {
             {
 
                 myTimer = 0;
-               // myScore += 0;
+                myScore += 0;
                 Score.text = myScore.ToString();
+
+
+                if (myScore == 100)
+                {
+                    jigar.SetActive(true);
+                }
+
             }
         }
 
@@ -39,5 +47,12 @@ public class ScoringSystem : MonoBehaviour {
     {
         myScore += 100;
 
+    }
+
+    public void _jigarscore()
+
+
+    {
+       
     }
 }
