@@ -15,7 +15,7 @@ public class ScletonSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Manager0.gamehasended == false)
+        if (Manager0.gamehasended == false && pausemenu.Gameispause==false)
         {
             if (Time.time > nextspawn)
             {

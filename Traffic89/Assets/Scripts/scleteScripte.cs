@@ -32,6 +32,13 @@ public class scleteScripte : MonoBehaviour {
         }
 
 
+        if (col.gameObject.tag == ("kale"))
+        {
+
+            Destroy(col.gameObject);
+        }
+
+
     }
     void OnTriggerEnter2D(Collider2D col)
     {

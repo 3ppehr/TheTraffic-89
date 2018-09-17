@@ -5,7 +5,8 @@ using UnityEngine;
 public class enmyspan : MonoBehaviour {
     public float spawnRate = 2f;
     float nextspawn = 0.0f;
-
+    float roundX;
+    Vector2 whereTospawn;
     public GameObject[] windowWithEnemy;
     public GameObject[] noEnemyWindow;
     public GameObject[] BalconyWithEnemy;
@@ -24,6 +25,10 @@ public class enmyspan : MonoBehaviour {
 
     void Update()
     {
+
+
+
+       
         //if (PauseMenu.GameIsPaused || GameManager.gameHasEnded)
         //    return;
         //if (enemyDistances > (this.transform.position.y - lastItem.transform.position.y))

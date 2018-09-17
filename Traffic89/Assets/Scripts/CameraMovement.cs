@@ -16,7 +16,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Manager0.gamehasended==false)
+        if(Manager0.gamehasended==false && pausemenu.Gameispause==false)
         {
             
             transform.Translate(Vector2.up * Time.deltaTime * speed * (Mathf.Sqrt(transform.position.y / 100) + 1));

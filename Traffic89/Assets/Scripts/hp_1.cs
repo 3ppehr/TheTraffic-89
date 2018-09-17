@@ -9,6 +9,16 @@ public class hp_1 : MonoBehaviour {
     Sprite FullHP;
     [SerializeField]
     Sprite LowHP;
+    [SerializeField]
+    Sprite LowHP1;
+    [SerializeField]
+    Sprite LowHP2;
+    [SerializeField]
+    Sprite LowHP3;
+
+
+
+
 
     // Use this for initialization
     void Start () {
@@ -27,6 +37,20 @@ public class hp_1 : MonoBehaviour {
         if (tmp == 3)
         {
             spriteRenderer.sprite = LowHP;
+        }
+
+        if (tmp == 2)
+        {
+            spriteRenderer.sprite = LowHP1;
+        }
+
+        if (tmp == 1)
+        {
+            spriteRenderer.sprite = LowHP2;
+        }
+        if (tmp == 0)
+        {
+            spriteRenderer.sprite = LowHP3;
         }
     }
 }

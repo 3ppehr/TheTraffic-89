@@ -7,6 +7,7 @@ public class Manager0 : MonoBehaviour {
     public Manager0 manage;
     public GameObject gameover;
     public static bool gamehasended=false;
+    public static bool Puase = false;
     // Use this for initialization
     void Start () {
 		

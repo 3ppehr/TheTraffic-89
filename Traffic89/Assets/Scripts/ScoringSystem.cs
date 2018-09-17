@@ -9,7 +9,7 @@ public class ScoringSystem : MonoBehaviour {
     // public ScoringSystem Scoring;
 
     public Text Score;
-    public float myScore=0;
+    public static int myScore=0;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +18,7 @@ public class ScoringSystem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Manager0.gamehasended == false)
+        if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
             myTimer = Time.deltaTime + myTimer;
             if (myTimer >= 1)
@@ -29,9 +29,13 @@ public class ScoringSystem : MonoBehaviour {
                 Score.text = myScore.ToString();
 
 
-                if (myScore == 100)
+                if (myScore == 1000)
                 {
                     jigar.SetActive(true);
+                }
+                if (myScore == 2000)
+                {
+                    jigar.SetActive(false);
                 }
 
             }
@@ -49,10 +53,5 @@ public class ScoringSystem : MonoBehaviour {
 
     }
 
-    public void _jigarscore()
-
-
-    {
-       
-    }
+    
 }
