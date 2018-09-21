@@ -21,25 +21,18 @@ public class shootSomething : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+    }
+   public void shoot()
+    {
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
-
-            if (Input.GetKeyDown(KeyCode.E) && canShoot)
-        {
-
             GameObject go = (GameObject)Instantiate(projectile, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
 
             go.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.y * transform.localScale.x, velocity.x);
-
-
-            //StartCoroutine(CanShoot());
-
-            //GetComponent<Animator>().SetTrigger("shoot");
-
         }
-     }
-
-   }
+    }
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Enemy")

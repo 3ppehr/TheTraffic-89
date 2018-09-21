@@ -5,6 +5,8 @@ using UnityEngine;
 public class pausemenu : MonoBehaviour {
     public GameObject PauswmenuUI;
     public static bool Gameispause = false;
+    public GameObject left;
+     public GameObject roght;
 
     // Use this for initialization
     void Start () {
@@ -25,11 +27,15 @@ public class pausemenu : MonoBehaviour {
     }
     public void Resume()
     {
+        roght.SetActive(true);
+        left.SetActive(true);
         PauswmenuUI.SetActive(false);
         Gameispause = false;
     }
     public void Paused()
     {
+        roght.SetActive(false);
+        left.SetActive(false);
         PauswmenuUI.SetActive(true);
         Gameispause = true;
 
