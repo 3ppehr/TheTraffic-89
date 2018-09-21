@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class pausemenu : MonoBehaviour {
+    public Manager0 Manager0;
     public GameObject PauswmenuUI;
     public static bool Gameispause = false;
     public GameObject left;
@@ -42,6 +43,7 @@ public class pausemenu : MonoBehaviour {
     }
     public void Rrestart()
     {
+        Manager0.gamehasended = false;
         Application.LoadLevel("Scence1");
         ScoringSystem.myScore = 0;
         Gameispause = false;

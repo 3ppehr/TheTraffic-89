@@ -25,4 +25,8 @@ public class Manager0 : MonoBehaviour {
             gamehasended = true;
         }
     }
+
+
+
+    
 }

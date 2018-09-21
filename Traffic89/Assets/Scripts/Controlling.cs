@@ -69,16 +69,25 @@ public class Controlling : MonoBehaviour
 
     public void left()
     {
-        rb2d.velocity = new Vector2(-speed, 0);
+        if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
+        {
+            rb2d.velocity = new Vector2(-speed, 0);
+        }
     }
     public void Right()
     {
-        rb2d.velocity = new Vector2(speed, 0);
+        if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
+        {
+            rb2d.velocity = new Vector2(speed, 0);
+        }
     }
 
     public void up()
     {
-        rb2d.velocity = new Vector2(0,speed);
+        if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
+        {
+            rb2d.velocity = new Vector2(0, speed);
+        }
     }
 
     //public void set()

@@ -22,7 +22,6 @@ public class shootSomething : MonoBehaviour
     void Update()
     {
 
-        
     }
    public void shoot()
     {
@@ -33,6 +32,9 @@ public class shootSomething : MonoBehaviour
             go.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.y * transform.localScale.x, velocity.x);
         }
     }
+
+
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Enemy")
