@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class scleteScripte : MonoBehaviour {
-
+    public float speed1;
+    Vector3 lastPos;
     public Controlling playerscript;
     // Use this for initialization
     void Start () {
@@ -12,8 +13,16 @@ public class scleteScripte : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+
+        if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
+        {
+            transform.Translate(Vector2.up * Time.deltaTime * speed1 * (Mathf.Sqrt(transform.position.y / 100) + 1));
+            Vector3 velocity = (this.transform.position - lastPos);
+
+        }
+
+    }
 
 
 
@@ -32,7 +41,7 @@ public class scleteScripte : MonoBehaviour {
         }
 
 
-        if (col.gameObject.tag == ("kale"))
+        if (col.gameObject.tag == ("crash car"))
         {
 
             Destroy(col.gameObject);

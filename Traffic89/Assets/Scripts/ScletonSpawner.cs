@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class ScletonSpawner : MonoBehaviour {
     public GameObject enemy;
+    public GameObject enemy1;
+    //public GameObject enemy2;
     float roundX;
+    float roundX1;
+    float roundX2;
     Vector2 whereTospawn;
+    Vector2 whereTospawn1;
+    Vector2 whereTospawn2;
     public float spawnRate = 2f;
+    public float spawnRate1 = 3f;
+    public float spawnRate2= 5f;
     float nextspawn = 0.0f;
+    float nextspawn1 = 0.0f;
+    float nextspawn2 = 0.0f;
     // Use this for initialization
     void Start () {
 		
@@ -21,12 +31,30 @@ public class ScletonSpawner : MonoBehaviour {
             {
 
                 nextspawn = Time.time + spawnRate;
-                roundX = Random.Range(-2, 2);
-                whereTospawn = new Vector2(roundX, transform.position. y);
+                roundX = Random.Range(-2.55f, -2.55f);
+                whereTospawn = new Vector2(roundX, transform.position.y);
                 Instantiate(enemy, whereTospawn, Quaternion.identity);
                 //
-
             }
+
+                if (Time.time > nextspawn1)
+                {
+
+                    nextspawn1 = Time.time + spawnRate1;
+                    roundX1 = Random.Range(-2.55f, -2.55f);
+                    whereTospawn1 = new Vector2(roundX1, transform.position.y);
+                    Instantiate(enemy1, whereTospawn1, Quaternion.identity);
+                }
+                
+
+
+                //nextspawn2 = Time.time + spawnRate2;
+                //roundX2 = Random.Range(-2.55f, -2.55f);
+                //whereTospawn2 = new Vector2(roundX2, transform.position.y);
+                //Instantiate(enemy2, whereTospawn2, Quaternion.identity);
+            
+        
+            
         }
 
     }

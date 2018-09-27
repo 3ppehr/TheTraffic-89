@@ -9,6 +9,7 @@ public class ScoringSystem : MonoBehaviour {
     // public ScoringSystem Scoring;
 
     public Text Score;
+    public Text Score1;
     public static int myScore=0;
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,7 @@ public class ScoringSystem : MonoBehaviour {
                 myTimer = 0;
                 myScore += 0;
                 Score.text = myScore.ToString();
-
+                Score1.text = myScore.ToString();
 
                 if (myScore == 1000)
                 {
@@ -53,5 +54,14 @@ public class ScoringSystem : MonoBehaviour {
 
     }
 
-    
+
+    public void _score_()
+
+
+    {
+        myScore += 100;
+
+    }
+
+
 }

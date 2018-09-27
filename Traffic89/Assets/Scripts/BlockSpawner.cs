@@ -6,14 +6,19 @@ public class BlockSpawner : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject kale;
+    public GameObject solakh;
     float roundX;
     float roundX1;
+    float roundX2;
     Vector2 whereTospawn;
     Vector2 whereTospawn1;
+    Vector2 whereTospawn2;
     public float spawnRate = 2f;
     public float spawnRate1 = 2f;
+    public float spawnRate2 = 2f;
     float nextspawn = 0.0f;
     float nextspawn1 = 0.0f;
+    float nextspawn2 = 0.0f;
 
     // Use this for initialization
     void Start()
@@ -42,6 +47,12 @@ public class BlockSpawner : MonoBehaviour
                 roundX1 = Random.Range(-2, 2);
                 whereTospawn1 = new Vector2(roundX1, transform.position.y);
                 Instantiate(kale, whereTospawn1, Quaternion.identity);
+
+
+                //nextspawn2 = Time.time + spawnRate2;
+                //roundX2 = Random.Range(-2, 2);
+                //whereTospawn2 = new Vector2(roundX2, transform.position.y);
+                //Instantiate(solakh, whereTospawn2, Quaternion.identity);
 
 
             }

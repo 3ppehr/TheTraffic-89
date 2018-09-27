@@ -25,6 +25,13 @@ public class shooter : MonoBehaviour {
              Destroy(col2.gameObject);
 
         }
+
+
+        if (col2.gameObject.tag == "crash car")
+        {
+            Destroy(bullet);
+
+        }
         else
         {
             Destroy(bullet);

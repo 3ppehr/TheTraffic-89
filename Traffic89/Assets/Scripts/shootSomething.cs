@@ -6,6 +6,7 @@ public class shootSomething : MonoBehaviour
 {
     public ScoringSystem Scoring;
     public GameObject projectile;
+    public float speed;
     public Vector2 velocity;
     bool canShoot = true;
     public Vector2 offset = new Vector2(0.4f, 0.1f);
@@ -29,7 +30,7 @@ public class shootSomething : MonoBehaviour
         {
             GameObject go = (GameObject)Instantiate(projectile, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
 
-            go.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.y * transform.localScale.x, velocity.x);
+            go.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.y * transform.localScale.x, velocity.x* speed);
         }
     }
 

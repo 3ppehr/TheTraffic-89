@@ -71,14 +71,14 @@ public class Controlling : MonoBehaviour
     {
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
-            rb2d.velocity = new Vector2(-speed, 0);
+            rb2d.velocity = new Vector2(-speed1, 0);
         }
     }
     public void Right()
     {
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
-            rb2d.velocity = new Vector2(speed, 0);
+            rb2d.velocity = new Vector2(speed1, 0);
         }
     }
 
@@ -86,68 +86,28 @@ public class Controlling : MonoBehaviour
     {
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
-            rb2d.velocity = new Vector2(0, speed);
+            rb2d.velocity = new Vector2(0, speed1);
         }
     }
 
-    //public void set()
-    //{
-    //    rb2d.velocity = Vector2.zero;
+    public void set()
+    {
+        rb2d.velocity = Vector2.zero;
 
-    //}
+    }
 
 
-//    public void hori()
-//    {
-//if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
-//            {
-
-//            float pointer_x = Input.GetAxis("Mouse X");
-//            float pointer_y = Input.GetAxis("Mouse Y");
-//            if (Input.touchCount > 0)
-//            {
-//                pointer_x = Input.touches[0].deltaPosition.x;
-//                pointer_y = Input.touches[0].deltaPosition.y;
-//            }
-//            //float pointer_x = Input.GetAxis("Mouse X");
-//            //float pointer_y = Input.GetAxis("Mouse Y");
-//            //if (Input.touchCount > 0)
-//            //{
-//            //    pointer_x = Input.touches[0].deltaPosition.x;
-//            //    pointer_y = Input.touches[0].deltaPosition.y;
-//            //}
-
-//            //Debug.Log("horiiiiiiiiiiii");
-//            ////Store the current horizontal input in the float moveHorizontal.
-//            float moveHorizontal = Input.GetAxis("Horizontal");
-
-//            ////Store the current vertical input in the float moveVertical.
-//            ////float moveVertical = Input.GetAxis("Vertical");
-
-//            ////Use the two store floats to create a new Vector2 variable movement.
-//            Vector2 movement = new Vector2(moveHorizontal, 0);
-
-//            ////Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
-//            rb2d.AddForce(movement * speed);
-//        }
-
-//    }
+   
 
     public void Damagetoplayer()
     {
         //bool tmp = EnemyInRange();
 
         playerscript.Health -= 1;
-        Debug.Log(playerscript.Health);
+        //Debug.Log(playerscript.Health);
 
     }
 
 
-    //void Hpover()
-    //{
-    //    Manager0.gamehasended = true;
-    //    gameover.SetActive (true);
-          
-
-    //}
+    
 }
