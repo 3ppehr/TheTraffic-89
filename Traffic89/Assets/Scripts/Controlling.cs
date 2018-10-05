@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Controlling : MonoBehaviour
 {
     public Manager0 Manager;
+    public Animator myanimator;
     public GameObject gameover;
     public int Health = 4;
     bool Heart1;
@@ -24,6 +25,7 @@ public class Controlling : MonoBehaviour
     {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
+        myanimator = GetComponent<Animator>();
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -72,6 +74,7 @@ public class Controlling : MonoBehaviour
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
             rb2d.velocity = new Vector2(-speed1, 0);
+            myanimator.SetBool("Left", true);
         }
     }
     public void Right()
@@ -79,7 +82,14 @@ public class Controlling : MonoBehaviour
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
             rb2d.velocity = new Vector2(speed1, 0);
+            myanimator.SetBool("Right", true);
+
         }
+    }
+    public void reset()
+    {
+        myanimator.SetBool("Right", false);
+        myanimator.SetBool("Left", false);
     }
 
     public void up()

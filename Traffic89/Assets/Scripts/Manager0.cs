@@ -5,6 +5,8 @@ using UnityEngine;
 public class Manager0 : MonoBehaviour {
     //public Controlling playerscript2;
     public Manager0 manage;
+    public GameObject Button1;
+    public GameObject Button2;
     public GameObject gameover;
     public static bool gamehasended=false;
     public static bool Puase = false;
@@ -21,6 +23,8 @@ public class Manager0 : MonoBehaviour {
     {
         if (gamehasended == false)
         {
+            Button1.SetActive(false);
+            Button2.SetActive(false);
             gameover.SetActive(true);
             gamehasended = true;
         }

@@ -35,8 +35,8 @@ public class BlockSpawner : MonoBehaviour
             if (Time.time > nextspawn)
             {
 
-                nextspawn = Time.time + spawnRate;
-                roundX = Random.Range(-2, 2);
+                nextspawn = (Time.time+0.05f) + spawnRate;
+                roundX = Random.Range(-1.66f, 2);
                 whereTospawn = new Vector2(roundX, transform.position.y);
                 Instantiate(enemy, whereTospawn, Quaternion.identity);
 
@@ -44,15 +44,15 @@ public class BlockSpawner : MonoBehaviour
 
 
                 nextspawn1 = Time.time + spawnRate1;
-                roundX1 = Random.Range(-2, 2);
+                roundX1 = Random.Range(-1.66f, 2);
                 whereTospawn1 = new Vector2(roundX1, transform.position.y);
                 Instantiate(kale, whereTospawn1, Quaternion.identity);
 
 
-                //nextspawn2 = Time.time + spawnRate2;
-                //roundX2 = Random.Range(-2, 2);
-                //whereTospawn2 = new Vector2(roundX2, transform.position.y);
-                //Instantiate(solakh, whereTospawn2, Quaternion.identity);
+                nextspawn2 = Time.time + spawnRate2;
+                roundX2 = Random.Range(-1.66f, 2);
+                whereTospawn2 = new Vector2(roundX2, transform.position.y);
+                Instantiate(solakh, whereTospawn2, Quaternion.identity);
 
 
             }

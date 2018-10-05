@@ -49,6 +49,10 @@ public class pausemenu : MonoBehaviour {
         Gameispause = false;
         
     }
+    public void Back()
+    {
+        Application.LoadLevel("Scence0");
+    }
 
 
     void Update () {

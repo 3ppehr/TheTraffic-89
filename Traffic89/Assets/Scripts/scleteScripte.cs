@@ -15,12 +15,12 @@ public class scleteScripte : MonoBehaviour {
 	void Update () {
 
 
-        if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
-        {
-            transform.Translate(Vector2.up * Time.deltaTime * speed1 * (Mathf.Sqrt(transform.position.y / 100) + 1));
-            Vector3 velocity = (this.transform.position - lastPos);
+        //if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
+        //{
+        //    transform.Translate(Vector2.up * Time.deltaTime * speed1 * (Mathf.Sqrt(transform.position.y / 100) + 1));
+        //    Vector3 velocity = (this.transform.position - lastPos);
 
-        }
+        //}
 
     }
 

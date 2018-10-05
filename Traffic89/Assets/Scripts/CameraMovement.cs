@@ -15,19 +15,14 @@ public class CameraMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //target = GameObject.Find("Player").transform;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Manager0.gamehasended==false && pausemenu.Gameispause==false)
-        {
-
-            
-
-
-
+        {            
             transform.Translate(Vector2.up * Time.deltaTime * speed * (Mathf.Sqrt(transform.position.y / 100) + 1));
             Vector3 velocity = (this.transform.position - lastPos);
         }
@@ -35,13 +30,5 @@ public class CameraMovement : MonoBehaviour
     }
 
 
-    public void zoomOut()
-    {
-       
-
-            Debug.Log("Bulletttttttttttttttttttttt");
-
-       
-        
-    }
+    
 }
