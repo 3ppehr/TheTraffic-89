@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoringSystem : MonoBehaviour {
     public float myTimer;
     public GameObject jigar;
+    public Text HighScore = null;
     // public ScoringSystem Scoring;
 
     public Text Score;
@@ -13,12 +14,17 @@ public class ScoringSystem : MonoBehaviour {
     public static int myScore=0;
 	// Use this for initialization
 	void Start () {
-		
+        HighScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        if(myScore>PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", myScore);
+            HighScore.text = myScore.ToString();
+        }
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
             myTimer = Time.deltaTime + myTimer;

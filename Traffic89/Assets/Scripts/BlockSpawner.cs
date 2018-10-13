@@ -23,11 +23,10 @@ public class BlockSpawner : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        spawn();
 
     }
-
-    // Update is called once per frame
-    void Update()
+    void spawn()
     {
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
@@ -35,11 +34,11 @@ public class BlockSpawner : MonoBehaviour
             if (Time.time > nextspawn)
             {
 
-                nextspawn = (Time.time+0.05f) + spawnRate;
+                nextspawn = (Time.time + 0.05f) + spawnRate;
                 roundX = Random.Range(-1.66f, 2);
                 whereTospawn = new Vector2(roundX, transform.position.y);
                 Instantiate(enemy, whereTospawn, Quaternion.identity);
-
+                //Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
 
 
 
@@ -70,7 +69,13 @@ public class BlockSpawner : MonoBehaviour
 
             //}
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
 
+        spawn();
+        
 
     }
 }

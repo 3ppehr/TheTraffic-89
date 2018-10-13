@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MainMenuCodes : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    public GameObject option;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -15,10 +15,11 @@ public class MainMenuCodes : MonoBehaviour {
 	}
     public void PlayGame()
     {
+        option.SetActive(true);
         pausemenu.Gameispause = false;
         ScoringSystem.myScore = 0;
         Manager0.gamehasended = false;
-        Application.LoadLevel("Scence1");
+        //Application.LoadLevel("Scence1");
     }
     public void Mute()
     {
