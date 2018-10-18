@@ -23,8 +23,8 @@ public class Destroyer : MonoBehaviour
             Destroy(col.gameObject);
         if (col.gameObject.tag == "player")
         {
-            //re.SetActive(true);
-            //shoot.SetActive(false);
+            shoot.SetActive(false);
+            re.SetActive(true);
             GameOverUI.SetActive(true);
             Manager0.gamehasended = true;
         }
