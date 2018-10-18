@@ -7,7 +7,9 @@ public class pausemenu : MonoBehaviour {
     public GameObject PauswmenuUI;
     public static bool Gameispause = false;
     public GameObject left;
-     public GameObject roght;
+    public GameObject roght;
+    public GameObject shoot;
+    public GameObject re;
 
     // Use this for initialization
     void Start () {
@@ -28,15 +30,18 @@ public class pausemenu : MonoBehaviour {
     }
     public void Resume()
     {
-        roght.SetActive(true);
-        left.SetActive(true);
+        //roght.SetActive(true);
+        //left.SetActive(true);
+        re.SetActive(false);
+        shoot.SetActive(true);
         PauswmenuUI.SetActive(false);
         Gameispause = false;
     }
     public void Paused()
     {
-        roght.SetActive(false);
-        left.SetActive(false);
+        //roght.SetActive(false);
+        // left.SetActive(false);
+        shoot.SetActive(false);
         PauswmenuUI.SetActive(true);
         Gameispause = true;
 

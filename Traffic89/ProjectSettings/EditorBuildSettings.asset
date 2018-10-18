@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scence0.unity
     guid: 37a8a91c08ff5134ea6a52a6bab6b1bc
   - enabled: 1
+    path: Assets/Scence_menu.unity
+    guid: 46cf05173f15d0c4ab39b57101c8501f
+  - enabled: 1
     path: Assets/Scence1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scence2.unity
+    guid: 25d3d99fed4f3444b9452271f1207908
+  - enabled: 1
+    path: Assets/Scence3.unity
+    guid: b55aa5f0773c6cc4ab077f3eed7adf71
   m_configObjects: {}

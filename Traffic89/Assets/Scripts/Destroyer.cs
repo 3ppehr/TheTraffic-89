@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
+    public GameObject re;
+    public GameObject shoot;
     public GameObject GameOverUI;
     // Use this for initialization
     void Start()
@@ -21,6 +23,8 @@ public class Destroyer : MonoBehaviour
             Destroy(col.gameObject);
         if (col.gameObject.tag == "player")
         {
+            //re.SetActive(true);
+            //shoot.SetActive(false);
             GameOverUI.SetActive(true);
             Manager0.gamehasended = true;
         }

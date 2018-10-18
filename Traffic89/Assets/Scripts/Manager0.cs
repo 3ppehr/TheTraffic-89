@@ -8,6 +8,8 @@ public class Manager0 : MonoBehaviour {
     public GameObject Button1;
     public GameObject Button2;
     public GameObject gameover;
+    public GameObject shoot;
+    public GameObject re;
     public static bool gamehasended=false;
     public static bool Puase = false;
     // Use this for initialization
@@ -23,8 +25,10 @@ public class Manager0 : MonoBehaviour {
     {
         if (gamehasended == false)
         {
-            Button1.SetActive(false);
-            Button2.SetActive(false);
+            shoot.SetActive(false);
+            //Button1.SetActive(false);
+            //Button2.SetActive(false);
+            re.SetActive(true);
             gameover.SetActive(true);
             gamehasended = true;
         }

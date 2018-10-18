@@ -15,11 +15,11 @@ public class MainMenuCodes : MonoBehaviour {
 	}
     public void PlayGame()
     {
-        option.SetActive(true);
+        //option.SetActive(true);
         pausemenu.Gameispause = false;
         ScoringSystem.myScore = 0;
         Manager0.gamehasended = false;
-        //Application.LoadLevel("Scence1");
+        Application.LoadLevel("Scence_menu");
     }
     public void Mute()
     {
