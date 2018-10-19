@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class scleteScripte : MonoBehaviour {
     public float speed1;
+    public GameObject enemy;
+    Vector2 whereTospawn;
     Vector3 lastPos;
     public Controlling playerscript;
     // Use this for initialization
@@ -36,8 +38,10 @@ public class scleteScripte : MonoBehaviour {
 
         if (col.gameObject.tag == ("Bullet"))
         {
-
+            Instantiate(enemy, this.transform.position, Quaternion.identity);
             Destroy(col.gameObject);
+           
+           
         }
 
 

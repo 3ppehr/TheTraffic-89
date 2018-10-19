@@ -10,7 +10,10 @@ public class crash_car : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        GetComponent<Rigidbody2D>().gravityScale = -0.05f;
+        if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
+        {
+            GetComponent<Rigidbody2D>().gravityScale = -0.05f;
+        }
     }
 	
 	// Update is called once per frame

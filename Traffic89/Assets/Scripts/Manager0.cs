@@ -26,8 +26,7 @@ public class Manager0 : MonoBehaviour {
         if (gamehasended == false)
         {
             shoot.SetActive(false);
-            //Button1.SetActive(false);
-            //Button2.SetActive(false);
+            
             re.SetActive(true);
             gameover.SetActive(true);
             gamehasended = true;

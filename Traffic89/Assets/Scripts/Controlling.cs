@@ -130,8 +130,16 @@ public class Controlling : MonoBehaviour
     public void Damagetoplayer()
     {
         //bool tmp = EnemyInRange();
-
         playerscript.Health -= 1;
+        if (Health == 3) 
+        myanimator.SetBool("Damage1", true);
+        if(Health==2)
+            myanimator.SetBool("Damage2", true);
+        if (Health == 1)
+            myanimator.SetBool("Damage3", true);
+        if (Health == 0)
+            myanimator.SetBool("Damage4", true);
+        
         //Debug.Log(playerscript.Health);
 
     }
