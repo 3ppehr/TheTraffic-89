@@ -12,7 +12,7 @@ public class crash_car : MonoBehaviour {
     void Start () {
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
-            GetComponent<Rigidbody2D>().gravityScale = -0.05f;
+            //GetComponent<Rigidbody2D>().gravityScale = -0.05f;
         }
     }
 	
@@ -24,31 +24,42 @@ public class crash_car : MonoBehaviour {
             //Vector3 velocity = (this.transform.position - lastPos);
 
         }
-        //dotDestroy1.zoomOut();
-
-       
-
-        //speed = speed + Time.inFixedTimeStep;
-        
-         // dotDestroy1.zoomOut();
-         //speed -= 0.009f;
-         //GetComponent<Rigidbody2D>().gravityScale = GetComponent<Rigidbody2D>().gravityScale + speed;
+        else
+        {
+            transform.Translate(Vector2.up * Time.deltaTime * 0f * (Mathf.Sqrt(transform.position.y / 100) + 1));
+            GetComponent<Rigidbody2D>().gravityScale = 0f;
+        }
+            
 
         
-
-         //GetComponent<Rigidbody2D>().gravityScale = GetComponent<Rigidbody2D>().gravityScale-speed;
-
 
     }
 
    
     void OnCollisionEnter2D(Collision2D col2)
     {
-        if (col2.gameObject.tag == "Bullet")
+        //if (col2.gameObject.tag == "Bullet")
+        //{
+        //    Debug.Log("Bullet");
+        //    Destroy(col2.gameObject);
+
+        //}
+
+
+
+
+        if (col2.gameObject.tag == "crash car")
         {
-            Debug.Log("Bullet");
+            Debug.Log("crash car");
             Destroy(col2.gameObject);
 
         }
     }
-    }
+
+
+
+   
+
+
+
+}

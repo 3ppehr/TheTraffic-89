@@ -143,6 +143,11 @@ public class Controlling : MonoBehaviour
         //Debug.Log(playerscript.Health);
 
     }
+    public void lifePlayer()
+    {
+        playerscript.Health += 1;
+        Debug.Log("crash car jiffffffffffffffffff");
+    }
 
 
     
