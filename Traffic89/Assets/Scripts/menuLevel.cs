@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Car1_menu : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+public class menuLevel : MonoBehaviour {
+    public GameObject panel;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (PlayerPrefs.GetInt("HighScore", 0) >= 1000)
+        {
+            panel.SetActive(false);
+        }
+
+    }
     public void Car1()
     {
         Application.LoadLevel("Scence1");
