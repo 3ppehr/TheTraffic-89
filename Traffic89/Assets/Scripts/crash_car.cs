@@ -12,7 +12,7 @@ public class crash_car : MonoBehaviour {
     void Start () {
         if (Manager0.gamehasended == false && pausemenu.Gameispause == false)
         {
-            //GetComponent<Rigidbody2D>().gravityScale = -0.05f;
+            GetComponent<Rigidbody2D>().gravityScale = -0.05f;
         }
     }
 	
